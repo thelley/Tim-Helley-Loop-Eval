@@ -1,13 +1,17 @@
+require('dotenv').config(); 
 const { test, expect } = require('@playwright/test');
 const testData = require('../test-data.json');
 
 test.describe('Asana Ticket Verification', () => {
   test.beforeEach(async ({ page }) => {
+    const email = process.env.EMAIL;
+    const password = process.env.PASSWORD;
+
     // Login
     await page.goto('https://app.asana.com/-/login');
-    await page.fill('input[name="e"]', 'ben+pose@workwithloop.com');
+    await page.fill('input[name="e"]', email);
     await page.click('div.ButtonThemeablePresentation--isEnabled.LoginEmailForm-continueButton');
-    await page.fill('input[name="p"]', 'Password123');
+    await page.fill('input[name="p"]', password);
     await page.click('div[role="button"]:has-text("Log in")');
   });
 
