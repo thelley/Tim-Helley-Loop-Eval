@@ -1,0 +1,45 @@
+[
+    {
+      "testCase": "Verify Draft project brief is in the To do column",
+      "page": "Cross-functional project plan, Project",
+      "task": "Draft project brief",
+      "column": "To do",
+      "tags": ["Non-Priority", "On track"]
+    },
+    {
+      "testCase": "Verify Schedule kickoff meeting is in the To do column",
+      "page": "Cross-functional project plan, Project",
+      "task": "Schedule kickoff meeting",
+      "column": "To do",
+      "tags": ["Medium", "At risk"]
+    },
+    {
+      "testCase": "Verify Share timeline with teammates is in the To do column",
+      "page": "Cross-functional project plan, Project",
+      "task": "Share timeline with teammates",
+      "column": "To do",
+      "tags": ["High", "Off track"]
+    },
+    {
+      "testCase": "Verify Laptop setup for new hire is in the New Requests column",
+      "page": "Work Requests",
+      "task": "[Example] Laptop setup for new hire",
+      "column": "New Requests",
+      "tags": ["Medium priority", "Low effort", "New hardware", "Not Started"]
+    },
+    {
+      "testCase": "Verify Password not working is in the In Progress column",
+      "page": "Work Requests",
+      "task": "[Example] Password not working",
+      "column": "In Progress",
+      "tags": ["Low effort", "Low priority", "Password reset", "Waiting"]
+    },
+    {
+      "testCase": "Verify New keycard for Daniela V is in the Completed column",
+      "page": "Work Requests",
+      "task": "[Example] New keycard for Daniela V",
+      "column": "Completed",
+      "tags": ["Low effort", "New hardware", "High Priority", "Done"]
+    }
+  ]
+  
