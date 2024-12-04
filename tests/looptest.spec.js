@@ -5,10 +5,9 @@ import login from './utils/login';
 
 test.describe('Asana Ticket Verification', () => {
   test.beforeEach(async ({ page }) => {
+    //login
     const email = process.env.EMAIL;
     const password = process.env.PASSWORD;
-
-    // Use the imported login function
     await login(page, email, password);
   });
 
@@ -18,12 +17,12 @@ test.describe('Asana Ticket Verification', () => {
 
       const columnLocator = page.locator(`h3.HighlightSol:has-text("${column}")`)
         .locator('xpath=ancestor::div[contains(@class, "CommentOnlyBoardColumn CommentOnlyBoardBody-column")]');
-      await expect(columnLocator).toBeVisible({ timeout: 10000 });
+      await expect(columnLocator).toBeVisible();
 
       const taskLocator = columnLocator.locator(
         `.CommentOnlyBoardColumnCardsContainer-itemContainer:has(.BoardCard-taskName:has-text("${task}"))`
       );
-      await taskLocator.waitFor({ state: 'visible', timeout: 10000 });
+      await taskLocator.waitFor({ state: 'visible'});
       await expect(taskLocator).toBeVisible();
 
       for (const tag of tags) {

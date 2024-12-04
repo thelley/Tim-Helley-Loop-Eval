@@ -11,6 +11,7 @@ module.exports = defineConfig({
 
   use: {
     trace: 'on-first-retry',
+    timeout: 10000,
   },
 
   projects: [
@@ -27,5 +28,4 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Safari'] },
     },
   ],
-
 });
